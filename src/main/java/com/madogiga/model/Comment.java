@@ -1,24 +1,27 @@
 package com.madogiga.model;
 
-import org.apache.tomcat.jni.User;
+
+import javax.persistence.*;
 
 /**
  * Created by MIYEON on 2016-06-16.
  */
-public class Comment {
 
-    private int id;
+@Entity
+public class Comment {
+    @Id
+    @GeneratedValue
+    private Integer id;
+    @JoinColumn(name = "userinfo_id")
+    @ManyToOne
     private User user;
     private String content;
-    private int likeCount;
-    private int dislikeCount;
-    private String datetime;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -36,29 +39,5 @@ public class Comment {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public int getLikeCount() {
-        return likeCount;
-    }
-
-    public void setLikeCount(int likeCount) {
-        this.likeCount = likeCount;
-    }
-
-    public int getDislikeCount() {
-        return dislikeCount;
-    }
-
-    public void setDislikeCount(int dislikeCount) {
-        this.dislikeCount = dislikeCount;
-    }
-
-    public String getDatetime() {
-        return datetime;
-    }
-
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
     }
 }

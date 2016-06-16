@@ -1,4 +1,4 @@
-package com.madogiga.controller;
+package com.madogiga.Controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;

@@ -1,0 +1,17 @@
+spring:
+  thymeleaf:
+    cache: false
+    prefix: /WEB-INF/views/
+    suffix: .html
+    enabled: false
+  datasource:
+    url: jdbc:mysql://whatsuda.cbbeyjrsbmb3.us-west-2.rds.amazonaws.com
+    username:
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  resources:
+    static-locations: /WEB-INF/views/spring/resources
+  mvc:
+      view:
+        prefix: /WEB-INF/views/
+        suffix: .html
