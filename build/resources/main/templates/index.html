@@ -1,34 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<title>MadoGioa</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div id="menu">		
-		<a id="sighUp" href="signup.html">회원가입</a>
-		<a id="sighIn" href="javascript:popupOpen('login.html');">로 그 인</a>
-	</div>
-	<div>
-		<table id="boardTable" width="100%" cellpadding="1" border="1">
-			<tr>
-				<td width="100">이미지</td>
-				<td width="70">이름</td>
-				<td width="">덧글</td>
-				<td width="150">추천 반대 삭제</td>
-				<td width="70">작성일</td>
+<div id="menuBoard"> </div>
+<div>
+	<table id="boardTable" width="100%" cellpadding="1" border="1">
+		<tr>
+			<th width="100">이미지</th>
+			<th width="70">이름</th>
+			<th width="">덧글</th>
+			<th width="150">추천 반대 삭제</th>
+			<th width="70">작성일</th>
+		</tr>
+	</table>
+</div>
 
-			</tr>
-		</table>
-	</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="index.js"></script>
-	<script type="text/javascript">
-		function popupOpen(URL){						
-			var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
-			window.open(URL,"",popOption);
-		}
-		</script>
+<script type="text/javascript">
+	$('#menuBoard').append('<a id="signupBtn" href="signup">회원가입</a> <a id="loginBtn" href="login">로 그 인</a>');
+
+	$('#boardTable').append('<tr><td width="100">이미지</td><td width="70">이름</td><td width="">덧글</td><td width="150">추천 반대 삭제</td><td width="70">작성일</td></tr>');
+
+
+</script>
 </body>
 </html>

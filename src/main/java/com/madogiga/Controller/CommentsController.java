@@ -1,4 +1,4 @@
-package com.madogiga;
+package com.madogiga.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -11,15 +11,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 @EnableAutoConfiguration
-public class PostsController {
+public class CommentsController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model){
         return "index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String newPost(Model model){
-//        model.addAttribute("post", new Post());
+    public String login(Model model){
         return "login";
+    }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    public String signUp(Model model){
+        return "signup";
     }
 }
