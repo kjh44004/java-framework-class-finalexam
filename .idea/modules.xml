@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam.iml" filepath="$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam_main.iml" group="java-framework-class-finalexam" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-framework-class-finalexam_test.iml" group="java-framework-class-finalexam" />
+    </modules>
+  </component>
+</project>
