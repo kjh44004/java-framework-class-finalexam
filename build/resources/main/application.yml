@@ -15,6 +15,3 @@ spring:
       view:
         prefix: /WEB-INF/views/
         suffix: .html
-#  jpa:
-#    hibernate:
-#      ddl-auto: validate

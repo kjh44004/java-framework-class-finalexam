@@ -18,14 +18,14 @@ public class SpringBootController {
     @Autowired
     private CommentRepository commentRepository;
 
-    @RequestMapping(value = "/comments", method={RequestMethod.GET})
+    @RequestMapping(value = "/comments", method = RequestMethod.GET)
     public ResponseEntity<?> list(@RequestParam(required = false, defaultValue = "0") Integer page, @RequestParam(required = false, defaultValue = "15") Integer size) {
-        Page<Comment> comments = commentRepository.findAll(new PageRequest(page, size));
-        return new ResponseEntity<>(comments, HttpStatus.OK);
+        Page<Comment> commments = commentRepository.findAll(new PageRequest(page, size));
+        return new ResponseEntity<>(commments, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/comment/{id}", method = {RequestMethod.POST, RequestMethod.PUT})
-    public ResponseEntity<?> save(@PathVariable("id") Integer id, @RequestBody Comment comment) {
+    @RequestMapping(value = "/comment/", method = {RequestMethod.POST, RequestMethod.PUT})
+    public ResponseEntity<?> save(@RequestBody Comment comment) {
         Comment result = commentRepository.save(comment);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
@@ -35,4 +35,5 @@ public class SpringBootController {
         Comment result = commentRepository.findOne(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
 }
